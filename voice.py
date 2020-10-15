@@ -44,11 +44,6 @@ async def on_ready():
 		await asyncio.sleep(1)
 
 
-@client.event
-async def on_voice_state_update(member, before, after):
-	pass
-
-
 @client.command()
 async def voicetime(ctx):
 	seconds = collection.find_one({"_id": ctx.author.id})['minvoice']
